@@ -1,0 +1,41 @@
+
+#   Example config :              Be sure to check this text before editing.
+
+# iface : wlan0           | -> Specifying the interface you want to sniff to.
+# sUsers :                | -> One of the categories of users (silver user category).
+#   - 192.168.204.42      | -> Ip of silver users .
+# vipUsers : None         | -> One of the categories of users (VIP user category) .
+#                         |    
+#                         |  NOTE:If you don't want to put an address in the category, don't leave it empty and fill it with the value of None.
+#                         |
+# usersLimit:             | -> The place where the limits are set .
+#   upload:               | -> Upload limits .
+#     nUsers : 1024       | -> Normal users upload limit (MB).
+#     sUsers : 500        | -> Silver users upload limit (MB).
+#     VipUsers : 4000     | -> VIP users upload limit (MB).
+#   download :            | -> Download limits .
+#     nUsers : 1024       | -> Normal users download limit (MB).
+#     sUsers : 2048       | -> Silver users download limit (MB).
+#     vipUsers : 4000     | -> VIP users download limit (MB).
+
+# The character '.' means that all IP addresses can be included in this category. prioritize : 
+#                                                                                [1] VIP user .
+#                                                                                [2] Silver user .
+#                                                                                [3] Normal user .
+
+# *** NOTE : Enter the limit unit in megabytes. ***
+
+
+
+iface : wlan0           
+sUsers : None    
+vipUsers : .                    
+usersLimit:             
+  upload:               
+    nUsers   : 1024       
+    sUsers   : 2048        
+    VipUsers : 4096     
+  download :            
+    nUsers   : 1024       
+    sUsers   : 2048       
+    vipUsers : 4096
